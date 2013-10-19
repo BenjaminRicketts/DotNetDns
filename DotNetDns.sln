@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Common", "DotNetDns.Common\DotNetDns.Common.csproj", "{4DCC6D5B-1A69-4105-A4F7-F9021099A4CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Common.Tests", "DotNetDns.Common.Tests\DotNetDns.Common.Tests.csproj", "{CFE30F4D-6097-4C9E-B9D1-3C8208C7930C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Bootstrapper", "DotNetDns.Bootstrapper\DotNetDns.Bootstrapper.csproj", "{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{4DCC6D5B-1A69-4105-A4F7-F9021099A4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCC6D5B-1A69-4105-A4F7-F9021099A4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCC6D5B-1A69-4105-A4F7-F9021099A4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE30F4D-6097-4C9E-B9D1-3C8208C7930C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE30F4D-6097-4C9E-B9D1-3C8208C7930C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE30F4D-6097-4C9E-B9D1-3C8208C7930C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE30F4D-6097-4C9E-B9D1-3C8208C7930C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
