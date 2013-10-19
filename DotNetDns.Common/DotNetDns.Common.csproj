@@ -43,6 +43,7 @@
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecord.cs" />
+    <Compile Include="Records\CNameRecord.cs" />
     <Compile Include="Records\Enums\RecordClass.cs" />
     <Compile Include="Records\Enums\RecordType.cs" />
     <Compile Include="Records\MdRecord.cs" />

@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecordTests.cs" />
     <Compile Include="Records\BaseResourceRecordTests.cs" />
+    <Compile Include="Records\CNameRecordTests.cs" />
     <Compile Include="Records\Enums\RecordClassTests.cs" />
     <Compile Include="Records\Enums\RecordTypeTests.cs" />
     <Compile Include="Records\MdRecordTests.cs" />

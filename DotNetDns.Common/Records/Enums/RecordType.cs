@@ -9,6 +9,7 @@ namespace DotNetDns.Common.Records
         [Obsolete("Obsolete - use an MX record.")]
         MD = 3,
         [Obsolete("Obsolete - use an MX record.")]
-        MF = 4
+        MF = 4,
+        CNAME = 5
     }
 }
