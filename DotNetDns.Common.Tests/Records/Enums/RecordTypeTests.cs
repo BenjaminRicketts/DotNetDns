@@ -34,15 +34,21 @@ namespace DotNetDns.Common.Tests.Records
         [Test]
         public void Md_Record_Type_Is_Marked_As_Obsolete()
         {
-            var expectedMessage = "Obsolete - use an MX record.";
-            var attribute = FindObsoleteAttribute(RecordType.MD);
-
-            Assert.That(attribute.Message, Is.EqualTo(expectedMessage));
+            AssertMxRecordAncestorIsObsolete(RecordType.MD);
         }
 
-        private ObsoleteAttribute FindObsoleteAttribute(RecordType recordType)
+        [Test]
+        public void Mf_Record_Type_Is_Marked_As_Obsolete()
         {
-            return recordType.Attribute<ObsoleteAttribute>();
+            AssertMxRecordAncestorIsObsolete(RecordType.MF);
+        }
+
+        public void AssertMxRecordAncestorIsObsolete(RecordType recordType)
+        {
+            var expectedMessage = "Obsolete - use an MX record.";
+            var attribute = recordType.Attribute<ObsoleteAttribute>();
+
+            Assert.That(attribute.Message, Is.EqualTo(expectedMessage));
         }
 
         private IEnumerable<TestCaseData> RecordTypeTestCases
@@ -53,7 +59,8 @@ namespace DotNetDns.Common.Tests.Records
                 {
                     new TestCaseData(RecordType.A, (byte)1),
                     new TestCaseData(RecordType.NS, (byte)2),
-                    new TestCaseData(RecordType.MD, (byte)3)
+                    new TestCaseData(RecordType.MD, (byte)3),
+                    new TestCaseData(RecordType.MF, (byte)4)
                 };
             }
         }

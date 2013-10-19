@@ -46,6 +46,7 @@
     <Compile Include="Records\Enums\RecordClass.cs" />
     <Compile Include="Records\Enums\RecordType.cs" />
     <Compile Include="Records\MdRecord.cs" />
+    <Compile Include="Records\MfRecord.cs" />
     <Compile Include="Records\NsRecord.cs" />
     <Compile Include="Records\ResourceRecord.cs" />
     <Compile Include="Settings\Abstractions\ISettingsService.cs" />
