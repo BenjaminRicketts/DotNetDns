@@ -7,6 +7,8 @@ namespace DotNetDns.Common.Records
     {
         private int _timeToLiveSeconds;
 
+        public RecordClass Class { get; set; }
+
         public int TimeToLiveSeconds 
         {
             get { return _timeToLiveSeconds; }
@@ -15,6 +17,11 @@ namespace DotNetDns.Common.Records
                 ValidateTimeToLiveSeconds(value);
                 _timeToLiveSeconds = value;
             }
+        }
+
+        public ResourceRecord()
+        {
+            Class = RecordClass.Internet;
         }
 
         private void ValidateTimeToLiveSeconds(int seconds)
