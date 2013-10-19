@@ -9,9 +9,14 @@ namespace DotNetDns.Common.Records
 
         public RecordClass Class { get; set; }
 
-        public string Content { get; set; }
+        public abstract string Content { get; }
 
-        public ushort ContentLength { get { return (ushort)Content.Length; } }
+        public ushort ContentLength 
+        { 
+            get { return (ushort)Content.Length; } 
+        }
+
+        public abstract RecordType Type { get; }
 
         public int TimeToLiveSeconds 
         {

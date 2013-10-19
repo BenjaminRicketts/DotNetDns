@@ -31,13 +31,18 @@ namespace DotNetDns.Common.Tests.Records
         [Test]
         public void Content_Length_Returns_The_Correct_Length()
         {
-            _record.Content = "Record content";
+            _record.Data = "Record content";
 
             Assert.That(_record.ContentLength, Is.EqualTo(_record.Content.Length));
         }
 
         private class TestRecord : ResourceRecord
         {
+            public override string Content { get { return Data; } }
+
+            public string Data { get; set; }
+
+            public override RecordType Type { get { return RecordType.A; } }
         }
     }
 }
