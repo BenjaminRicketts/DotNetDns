@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DotNetDns.Common.Records;
 using NUnit.Framework;
+using Fasterflect;
 
 namespace DotNetDns.Common.Tests.Records
 {
@@ -30,6 +31,20 @@ namespace DotNetDns.Common.Tests.Records
             Assert.That(nonTestedTypes, Is.Empty);
         }
 
+        [Test]
+        public void Md_Record_Type_Is_Marked_As_Obsolete()
+        {
+            var expectedMessage = "Obsolete - use an MX record.";
+            var attribute = FindObsoleteAttribute(RecordType.MD);
+
+            Assert.That(attribute.Message, Is.EqualTo(expectedMessage));
+        }
+
+        private ObsoleteAttribute FindObsoleteAttribute(RecordType recordType)
+        {
+            return recordType.Attribute<ObsoleteAttribute>();
+        }
+
         private IEnumerable<TestCaseData> RecordTypeTestCases
         {
             get
@@ -37,7 +52,8 @@ namespace DotNetDns.Common.Tests.Records
                 return new List<TestCaseData>
                 {
                     new TestCaseData(RecordType.A, (byte)1),
-                    new TestCaseData(RecordType.NS, (byte)2)
+                    new TestCaseData(RecordType.NS, (byte)2),
+                    new TestCaseData(RecordType.MD, (byte)3)
                 };
             }
         }

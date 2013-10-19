@@ -54,6 +54,7 @@
     <Compile Include="Records\BaseResourceRecordTests.cs" />
     <Compile Include="Records\Enums\RecordClassTests.cs" />
     <Compile Include="Records\Enums\RecordTypeTests.cs" />
+    <Compile Include="Records\MdRecordTests.cs" />
     <Compile Include="Records\NsRecordTests.cs" />
     <Compile Include="Records\ResourceRecordTests.cs" />
     <Compile Include="Settings\SettingsServiceTests.cs" />
