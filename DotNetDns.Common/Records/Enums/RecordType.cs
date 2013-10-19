@@ -2,6 +2,7 @@
 {
     public enum RecordType : byte
     {
-        A = 1
+        A = 1,
+        NS = 2
     }
 }

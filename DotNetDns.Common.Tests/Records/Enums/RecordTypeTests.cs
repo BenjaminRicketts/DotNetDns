@@ -36,7 +36,8 @@ namespace DotNetDns.Common.Tests.Records
             {
                 return new List<TestCaseData>
                 {
-                    new TestCaseData(RecordType.A, (byte)1)
+                    new TestCaseData(RecordType.A, (byte)1),
+                    new TestCaseData(RecordType.NS, (byte)2)
                 };
             }
         }
