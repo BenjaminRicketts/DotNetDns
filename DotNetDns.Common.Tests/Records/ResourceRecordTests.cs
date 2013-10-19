@@ -28,6 +28,14 @@ namespace DotNetDns.Common.Tests.Records
             Assert.That(_record.Class, Is.EqualTo(RecordClass.Internet));
         }
 
+        [Test]
+        public void Content_Length_Returns_The_Correct_Length()
+        {
+            _record.Content = "Record content";
+
+            Assert.That(_record.ContentLength, Is.EqualTo(_record.Content.Length));
+        }
+
         private class TestRecord : ResourceRecord
         {
         }
