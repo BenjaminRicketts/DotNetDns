@@ -63,7 +63,8 @@ namespace DotNetDns.Common.Tests.Records
                     new TestCaseData(RecordType.MF, (byte)4),
                     new TestCaseData(RecordType.CNAME, (byte)5),
                     new TestCaseData(RecordType.SOA, (byte)6),
-                    new TestCaseData(RecordType.MB, (byte)7)
+                    new TestCaseData(RecordType.MB, (byte)7),
+                    new TestCaseData(RecordType.MG, (byte)8)
                 };
             }
         }
