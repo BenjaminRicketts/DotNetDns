@@ -11,6 +11,7 @@ namespace DotNetDns.Common.Records
         [Obsolete("Obsolete - use an MX record.")]
         MF = 4,
         CNAME = 5,
-        SOA = 6
+        SOA = 6,
+        MB = 7
     }
 }
