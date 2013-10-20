@@ -59,6 +59,7 @@
     <Compile Include="Records\MdRecordTests.cs" />
     <Compile Include="Records\MfRecordTests.cs" />
     <Compile Include="Records\MgRecordTests.cs" />
+    <Compile Include="Records\MrRecordTests.cs" />
     <Compile Include="Records\NsRecordTests.cs" />
     <Compile Include="Records\ResourceRecordTests.cs" />
     <Compile Include="Records\SoaRecordTests.cs" />

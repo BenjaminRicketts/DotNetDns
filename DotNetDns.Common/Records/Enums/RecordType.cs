@@ -13,6 +13,7 @@ namespace DotNetDns.Common.Records
         CNAME = 5,
         SOA = 6,
         MB = 7,
-        MG = 8
+        MG = 8,
+        MR = 9
     }
 }
