@@ -64,6 +64,7 @@
     <Compile Include="Records\NullRecordTests.cs" />
     <Compile Include="Records\ResourceRecordTests.cs" />
     <Compile Include="Records\SoaRecordTests.cs" />
+    <Compile Include="Records\WksRecordTests.cs" />
     <Compile Include="Settings\SettingsServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>

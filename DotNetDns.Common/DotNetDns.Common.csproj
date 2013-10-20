@@ -55,6 +55,7 @@
     <Compile Include="Records\NullRecord.cs" />
     <Compile Include="Records\ResourceRecord.cs" />
     <Compile Include="Records\SoaRecord.cs" />
+    <Compile Include="Records\WksRecord.cs" />
     <Compile Include="Settings\Abstractions\ISettingsService.cs" />
     <Compile Include="Settings\SettingsService.cs" />
   </ItemGroup>
