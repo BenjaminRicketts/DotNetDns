@@ -14,6 +14,7 @@ namespace DotNetDns.Common.Records
         SOA = 6,
         MB = 7,
         MG = 8,
-        MR = 9
+        MR = 9,
+        NULL = 10
     }
 }
