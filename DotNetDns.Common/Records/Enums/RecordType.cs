@@ -19,6 +19,7 @@ namespace DotNetDns.Common.Records
         WKS = 11,
         PTR = 12,
         HINFO = 13,
-        MINFO = 14
+        MINFO = 14,
+        MX = 15
     }
 }
