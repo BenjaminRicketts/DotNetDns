@@ -46,10 +46,12 @@
     <Compile Include="Records\CNameRecord.cs" />
     <Compile Include="Records\Enums\RecordClass.cs" />
     <Compile Include="Records\Enums\RecordType.cs" />
+    <Compile Include="Records\HInfoRecord.cs" />
     <Compile Include="Records\MbRecord.cs" />
     <Compile Include="Records\MdRecord.cs" />
     <Compile Include="Records\MfRecord.cs" />
     <Compile Include="Records\MgRecord.cs" />
+    <Compile Include="Records\MInfoRecord.cs" />
     <Compile Include="Records\MrRecord.cs" />
     <Compile Include="Records\NsRecord.cs" />
     <Compile Include="Records\NullRecord.cs" />

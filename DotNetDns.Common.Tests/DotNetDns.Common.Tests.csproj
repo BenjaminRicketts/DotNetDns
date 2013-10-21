@@ -55,10 +55,12 @@
     <Compile Include="Records\CNameRecordTests.cs" />
     <Compile Include="Records\Enums\RecordClassTests.cs" />
     <Compile Include="Records\Enums\RecordTypeTests.cs" />
+    <Compile Include="Records\HInfoRecordTests.cs" />
     <Compile Include="Records\MbRecordTests.cs" />
     <Compile Include="Records\MdRecordTests.cs" />
     <Compile Include="Records\MfRecordTests.cs" />
     <Compile Include="Records\MgRecordTests.cs" />
+    <Compile Include="Records\MInfoRecordTests.cs" />
     <Compile Include="Records\MrRecordTests.cs" />
     <Compile Include="Records\NsRecordTests.cs" />
     <Compile Include="Records\NullRecordTests.cs" />

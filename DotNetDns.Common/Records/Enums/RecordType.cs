@@ -17,6 +17,8 @@ namespace DotNetDns.Common.Records
         MR = 9,
         NULL = 10,
         WKS = 11,
-        PTR
+        PTR = 12,
+        HINFO = 13,
+        MINFO = 14
     }
 }
