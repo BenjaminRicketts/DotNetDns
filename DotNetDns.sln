@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Common.Tests", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Bootstrapper", "DotNetDns.Bootstrapper\DotNetDns.Bootstrapper.csproj", "{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Server", "DotNetDns.Server\DotNetDns.Server.csproj", "{4C5F3A58-CEFC-4E19-B1C1-1AF3479B4816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDns.Server.Tests", "DotNetDns.Server.Tests\DotNetDns.Server.Tests.csproj", "{B9DC566B-C92F-4256-8126-AD649A4A3649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ABD3871-6C34-40F2-AD4B-81A225CB7A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5F3A58-CEFC-4E19-B1C1-1AF3479B4816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5F3A58-CEFC-4E19-B1C1-1AF3479B4816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5F3A58-CEFC-4E19-B1C1-1AF3479B4816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5F3A58-CEFC-4E19-B1C1-1AF3479B4816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9DC566B-C92F-4256-8126-AD649A4A3649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DC566B-C92F-4256-8126-AD649A4A3649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DC566B-C92F-4256-8126-AD649A4A3649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DC566B-C92F-4256-8126-AD649A4A3649}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,6 +23,14 @@ namespace DotNetDns.Common.Tests.Records
         }
 
         [Test]
+        public void Valid_Time_To_Live_Does_Not_Throw()
+        {
+            _record.TimeToLiveSeconds = 3600;
+
+            Assert.That(_record.TimeToLiveSeconds, Is.EqualTo(3600));
+        }
+
+        [Test]
         public void Internet_Class_Is_Set_By_Default()
         {
             Assert.That(_record.Class, Is.EqualTo(RecordClass.Internet));
