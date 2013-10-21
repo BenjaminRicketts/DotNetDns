@@ -67,7 +67,8 @@ namespace DotNetDns.Common.Tests.Records
                     new TestCaseData(RecordType.MG, (byte)8),
                     new TestCaseData(RecordType.MR, (byte)9),
                     new TestCaseData(RecordType.NULL, (byte)10),
-                    new TestCaseData(RecordType.WKS, (byte)11)
+                    new TestCaseData(RecordType.WKS, (byte)11),
+                    new TestCaseData(RecordType.PTR, (byte)12)
                 };
             }
         }

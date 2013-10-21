@@ -53,6 +53,7 @@
     <Compile Include="Records\MrRecord.cs" />
     <Compile Include="Records\NsRecord.cs" />
     <Compile Include="Records\NullRecord.cs" />
+    <Compile Include="Records\PtrRecord.cs" />
     <Compile Include="Records\ResourceRecord.cs" />
     <Compile Include="Records\SoaRecord.cs" />
     <Compile Include="Records\WksRecord.cs" />
