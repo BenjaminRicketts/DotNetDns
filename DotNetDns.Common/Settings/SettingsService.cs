@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Configuration;
 
 namespace DotNetDns.Common.Settings
@@ -7,25 +8,44 @@ namespace DotNetDns.Common.Settings
     {
         public string GetSettingByName(string name)
         {
-            ValidateSettingName(name);
+            var value = GetSettingValue(name);
 
-            var value = ConfigurationManager.AppSettings[name];
-
-            ValidateSettingValue(name, value);
+            if (value == null)
+                throw new Exception(string.Format("The '{0}' application setting cannot be found.", name));
 
             return value;
         }
 
-        private void ValidateSettingName(string name)
+        public string GetSettingByName(string name, string defaultValue)
+        {
+            var value = GetSettingValue(name);
+
+            return value == null ? defaultValue : value;
+        }
+
+        public T GetSettingByName<T>(string name)
+        {
+            return ConvertFromString<T>(GetSettingByName(name));
+        }
+
+        public T GetSettingByName<T>(string name, T defaultValue)
+        {
+            var value = GetSettingValue(name);
+
+            return value == null ? defaultValue : ConvertFromString<T>(value);
+        }
+
+        private T ConvertFromString<T>(string value)
+        {
+            return (T)Convert.ChangeType(value, typeof(T));
+        }
+
+        private string GetSettingValue(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("An application setting cannot have a null or empty name.");
-        }
 
-        private void ValidateSettingValue(string name, string value)
-        {
-            if (value == null)
-                throw new Exception(string.Format("The '{0}' application setting cannot be found.", name));
+            return ConfigurationManager.AppSettings[name];
         }
     }
 }
