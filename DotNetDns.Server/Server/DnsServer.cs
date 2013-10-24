@@ -6,12 +6,12 @@ using DotNetDns.Server.Server.Listeners;
 
 namespace DotNetDns.Server.Server
 {
-    public class DnsServer
+    public class DnsServer : IDnsServer
     {
         private readonly IList<IDnsListener> _listeners;
         private IList<Task> _listenerTasks;
         private Task _mainServiceTask;
-        
+
         public DnsServer(IList<IDnsListener> listeners)
         {
             _listeners = listeners;
@@ -24,6 +24,11 @@ namespace DotNetDns.Server.Server
         {
             _mainServiceTask = new Task(ListenForDnsQueries);
             _mainServiceTask.Start();
+        }
+
+        public void StopListening()
+        {
+            throw new NotImplementedException();
         }
 
         private void CreateListenerTasks()

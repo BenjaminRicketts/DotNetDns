@@ -45,6 +45,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server\DnsServer.cs" />
+    <Compile Include="Server\IDnsServer.cs" />
     <Compile Include="Server\Listeners\IDnsListener.cs" />
     <Compile Include="Server\Listeners\UdpListener.cs" />
     <Compile Include="Service.cs">
