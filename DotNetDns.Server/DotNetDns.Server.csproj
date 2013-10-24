@@ -50,7 +50,7 @@
     <Compile Include="Service.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Server\Settings\Abstractions\IDnsServerSettings.cs" />
+    <Compile Include="Server\Settings\IDnsServerSettings.cs" />
     <Compile Include="Server\Settings\DnsServerSettings.cs" />
   </ItemGroup>
   <ItemGroup>
