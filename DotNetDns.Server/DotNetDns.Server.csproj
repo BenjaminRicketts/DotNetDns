@@ -44,8 +44,14 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings\Abstractions\IDnsServerSettings.cs" />
-    <Compile Include="Settings\DnsServerSettings.cs" />
+    <Compile Include="Server\DnsServer.cs" />
+    <Compile Include="Server\Listeners\IDnsListener.cs" />
+    <Compile Include="Server\Listeners\UdpListener.cs" />
+    <Compile Include="Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Server\Settings\Abstractions\IDnsServerSettings.cs" />
+    <Compile Include="Server\Settings\DnsServerSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +66,7 @@
       <Name>DotNetDns.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

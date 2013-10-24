@@ -16,7 +16,12 @@ namespace DotNetDns.TestHelpers
         public Mocker<TENTITY> AssertWasCalledOnce<TVALUE>(Expression<Func<TENTITY, TVALUE>> property)
         {
             _mock.Verify(property, Times.Once());
+            return this;
+        }
 
+        public Mocker<TENTITY> AssertWasCalledOnce(Expression<Action<TENTITY>> action)
+        {
+            _mock.Verify(action, Times.Once());
             return this;
         }
 
