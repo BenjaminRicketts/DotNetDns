@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DotNetDns.Server.Server;
 using DotNetDns.Server.Server.Listeners;
 using DotNetDns.TestHelpers;
-using Moq;
 using NUnit.Framework;
 
 namespace DotNetDns.Server.Tests.Server
