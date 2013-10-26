@@ -1,4 +1,5 @@
-﻿using DotNetDns.Common.Settings;
+﻿using DotNetDns.Bootstrapper.Ioc.Attributes;
+using DotNetDns.Common.Settings;
 using DotNetDns.Server.Settings;
 
 namespace DotNetDns.Server.Settings

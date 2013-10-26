@@ -60,8 +60,14 @@
     <Compile Include="Records\ResourceRecord.cs" />
     <Compile Include="Records\SoaRecord.cs" />
     <Compile Include="Records\WksRecord.cs" />
-    <Compile Include="Settings\Abstractions\ISettingsService.cs" />
+    <Compile Include="Settings\ISettingsService.cs" />
     <Compile Include="Settings\SettingsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetDns.Bootstrapper\DotNetDns.Bootstrapper.csproj">
+      <Project>{7abd3871-6c34-40f2-ad4b-81a225cb7a2b}</Project>
+      <Name>DotNetDns.Bootstrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

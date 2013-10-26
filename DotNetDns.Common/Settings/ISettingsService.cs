@@ -1,5 +1,8 @@
-﻿namespace DotNetDns.Common.Settings
+﻿using DotNetDns.Bootstrapper.Ioc.Attributes;
+
+namespace DotNetDns.Common.Settings
 {
+    [Singleton]
     public interface ISettingsService
     {
         string GetSettingByName(string name);

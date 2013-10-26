@@ -15,14 +15,22 @@ namespace DotNetDns.Server.Tests.Server
         [ExpectedException(typeof(Exception), ExpectedMessage = "DNS server cannot listen for DNS queries without any listeners configured.")]
         public void Initialising_Dns_Server_With_No_Listeners_Configured_Throws(IList<IDnsListener> listeners)
         {
-            new DnsServer(listeners);
+            var factory = new Mocker<IDnsListenerFactory>()
+                                .With(x => x.CreateListeners(), listeners)
+                                .ToEntity();
+
+            new DnsServer(factory);
         }
 
         [Test]
         public void Starting_Dns_Server_Starts_Listeners()
         {
             var mockListener = new Mocker<IDnsListener>();
-            var server = new DnsServer(new List<IDnsListener> { mockListener.ToEntity() });
+            var factory = new Mocker<IDnsListenerFactory>()
+                                .With(x => x.CreateListeners(), new List<IDnsListener> { mockListener.ToEntity() })
+                                .ToEntity();
+            
+            var server = new DnsServer(factory);
 
             server.StartListening();
 

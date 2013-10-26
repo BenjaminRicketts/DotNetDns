@@ -12,9 +12,9 @@ namespace DotNetDns.Server.Server
         private IList<Task> _listenerTasks;
         private Task _mainServiceTask;
 
-        public DnsServer(IList<IDnsListener> listeners)
+        public DnsServer(IDnsListenerFactory listenerFactory)
         {
-            _listeners = listeners;
+            _listeners = listenerFactory.CreateListeners();
 
             ValidateListeners();
             CreateListenerTasks();
