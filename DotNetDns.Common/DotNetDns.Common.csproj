@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainNames\DomainNameValidator.cs" />
+    <Compile Include="DomainNames\ITopLevelDomains.cs" />
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecord.cs" />
@@ -68,6 +70,9 @@
       <Project>{7abd3871-6c34-40f2-ad4b-81a225cb7a2b}</Project>
       <Name>DotNetDns.Bootstrapper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DomainNames\ValidTopLevelDomains.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

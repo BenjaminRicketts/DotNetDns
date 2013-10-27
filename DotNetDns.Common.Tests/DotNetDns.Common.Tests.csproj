@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainNames\DomainNameValidatorTests.cs" />
     <Compile Include="Extensions\IntegerExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecordTests.cs" />
@@ -79,6 +80,10 @@
     <ProjectReference Include="..\DotNetDns.Common\DotNetDns.Common.csproj">
       <Project>{4dcc6d5b-1a69-4105-a4f7-f9021099a4ca}</Project>
       <Name>DotNetDns.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNetDns.TestHelpers\DotNetDns.TestHelpers.csproj">
+      <Project>{45efc8a8-6407-4660-8bd4-959d50715fe7}</Project>
+      <Name>DotNetDns.TestHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
