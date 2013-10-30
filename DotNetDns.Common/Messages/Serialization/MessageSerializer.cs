@@ -2,7 +2,7 @@
 
 namespace DotNetDns.Common.Messages.Serialization
 {
-    public class MessageSerializer
+    public class MessageSerializer : IMessageSerializer
     {
         public Message DeserializeFromBytes(byte[] bytes)
         {

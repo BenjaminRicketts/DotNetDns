@@ -21,7 +21,5 @@ namespace DotNetDns.Common.Tests.Messages.Serialization
         {
             _serializer.DeserializeFromBytes(null);
         }
-
-
     }
 }

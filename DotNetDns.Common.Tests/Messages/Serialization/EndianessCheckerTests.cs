@@ -1,8 +1,7 @@
 ﻿using System;
 using DotNetDns.Common.Messages.Serialization;
-using NUnit.Framework;
-using Fasterflect;
 using DotNetDns.TestHelpers.Assertions;
+using NUnit.Framework;
 
 namespace DotNetDns.Common.Tests.Messages.Serialization
 {
