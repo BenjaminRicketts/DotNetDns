@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainNames\DomainNameValidatorTests.cs" />
     <Compile Include="Extensions\IntegerExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecordTests.cs" />
