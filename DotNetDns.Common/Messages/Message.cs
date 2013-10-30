@@ -1,4 +1,4 @@
-﻿namespace DotNetDns.Common.Message
+﻿namespace DotNetDns.Common.Messages
 {
     public class Message
     {

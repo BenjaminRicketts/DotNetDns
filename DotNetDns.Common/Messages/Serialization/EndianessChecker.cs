@@ -1,7 +1,7 @@
 ﻿using System;
 using DotNetDns.Bootstrapper.Ioc.Attributes;
 
-namespace DotNetDns.Common.Message.Serialization
+namespace DotNetDns.Common.Messages.Serialization
 {
     [Singleton]
     public class EndianessChecker : IEndianessChecker

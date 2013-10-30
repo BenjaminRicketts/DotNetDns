@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNetDns.Common.Message.Serialization
+namespace DotNetDns.Common.Messages.Serialization
 {
     public class MessageSerializer
     {

@@ -41,10 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IntegerExtensions.cs" />
-    <Compile Include="Message\Message.cs" />
-    <Compile Include="Message\Serialization\EndianessChecker.cs" />
-    <Compile Include="Message\Serialization\Abstractions\IEndianessChecker.cs" />
-    <Compile Include="Message\Serialization\MessageSerializer.cs" />
+    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\Serialization\EndianessChecker.cs" />
+    <Compile Include="Messages\Serialization\Abstractions\IEndianessChecker.cs" />
+    <Compile Include="Messages\Serialization\MessageSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecord.cs" />
     <Compile Include="Records\CNameRecord.cs" />

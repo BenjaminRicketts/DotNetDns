@@ -1,8 +1,8 @@
 ﻿using System;
-using DotNetDns.Common.Message.Serialization;
+using DotNetDns.Common.Messages.Serialization;
 using NUnit.Framework;
 
-namespace DotNetDns.Common.Tests.Message.Serialization
+namespace DotNetDns.Common.Tests.Messages.Serialization
 {
     [TestFixture]
     public class MessageSerializerTests
