@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IntegerExtensionsTests.cs" />
+    <Compile Include="Message\Serialization\EndianessCheckerTests.cs" />
+    <Compile Include="Message\Serialization\MessageSerializerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecordTests.cs" />
     <Compile Include="Records\BaseResourceRecordTests.cs" />
