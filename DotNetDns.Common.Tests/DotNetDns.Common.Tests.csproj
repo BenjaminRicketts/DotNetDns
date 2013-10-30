@@ -52,7 +52,6 @@
     <Compile Include="Messages\Serialization\EndianessCheckerTests.cs" />
     <Compile Include="Messages\Serialization\Helpers\HeaderBytes.cs" />
     <Compile Include="Messages\Serialization\MessageSerializerTests.cs" />
-    <Compile Include="Messages\Serialization\SerializationTestData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\ARecordTests.cs" />
     <Compile Include="Records\BaseResourceRecordTests.cs" />

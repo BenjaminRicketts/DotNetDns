@@ -8,7 +8,13 @@ namespace DotNetDns.Common.Tests.Messages.Serialization
 
         internal HeaderBytes()
         {
-            _headerBytes = new byte[2];
+            _headerBytes = new byte[4];
+        }
+
+        internal HeaderBytes WithFlagBytes(byte[] bytes)
+        {
+            SetBytesAt(2, bytes);
+            return this;
         }
 
         internal HeaderBytes WithIdBytes(byte[] bytes)

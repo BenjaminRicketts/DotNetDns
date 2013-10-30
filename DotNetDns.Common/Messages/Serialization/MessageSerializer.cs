@@ -17,7 +17,8 @@ namespace DotNetDns.Common.Messages.Serialization
                 {
                     _serializers = new List<PropertySerializer>
                     {
-                        new IdSerializer(_endianessChecker)
+                        new IdSerializer(_endianessChecker),
+                        new FlagsSerializer(_endianessChecker)
                     };
                 }
 

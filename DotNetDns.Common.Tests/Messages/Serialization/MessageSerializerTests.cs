@@ -6,15 +6,19 @@ using NUnit.Framework;
 namespace DotNetDns.Common.Tests.Messages.Serialization
 {
     [TestFixture]
-    public class MessageSerializerTests : SerializationTestData
+    public class MessageSerializerTests
     {
         private Mocker<IEndianessChecker> _endianessCheckerMocker;
+        private HeaderBytes _headerBytes;
         private MessageSerializer _serializer;
 
         [SetUp]
-        public void SetupSerializer()
+        public void SetupTest()
         {
-            _endianessCheckerMocker = new Mocker<IEndianessChecker>();
+            _endianessCheckerMocker = new Mocker<IEndianessChecker>()
+                                            .With(checker => checker.IsLittleEndianSystem, true);
+                                            
+            _headerBytes = new HeaderBytes();
             _serializer = new MessageSerializer(_endianessCheckerMocker.ToEntity());
         }
 
@@ -26,23 +30,31 @@ namespace DotNetDns.Common.Tests.Messages.Serialization
         }
 
         [Test]
-        [TestCaseSource("UnsignedShortData")]
-        public void Message_Id_Is_Correctly_Deserialized(byte[] idBytes, ushort expectedId, bool isLittleEndian)
+        [TestCase(new byte[] { 0, 1 }, (ushort)1)]
+        [TestCase(new byte[] { 1, 0 }, (ushort)256)]
+        public void Message_Id_Is_Correctly_Deserialized(byte[] idBytes, ushort expectedId)
         {
-            SetToLittleEndianess(isLittleEndian);
-
-            var bytes = new HeaderBytes()
-                                .WithIdBytes(idBytes)
-                                .ToArray();
+            var bytes = _headerBytes
+                            .WithIdBytes(idBytes)
+                            .ToArray();
 
             var message = _serializer.DeserializeFromBytes(bytes);
 
             Assert.That(message.Id, Is.EqualTo(expectedId));
         }
 
-        private void SetToLittleEndianess(bool isLittleEndian)
+        [Test]
+        [TestCase(new byte[] { 0, 0 }, true)]
+        [TestCase(new byte[] { 128, 0 }, false)]
+        public void Message_Type_Is_Correctly_Deserialized(byte[] flagBytes, bool expectedValue)
         {
-            _endianessCheckerMocker.With(checker => checker.IsLittleEndianSystem, isLittleEndian);
+            var bytes = _headerBytes
+                            .WithFlagBytes(flagBytes)
+                            .ToArray();
+
+            var message = _serializer.DeserializeFromBytes(bytes);
+
+            Assert.That(message.IsAQuery, Is.EqualTo(expectedValue));
         }
     }
 }

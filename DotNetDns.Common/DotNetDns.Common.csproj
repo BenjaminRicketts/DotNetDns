@@ -47,6 +47,7 @@
     <Compile Include="Messages\Serialization\Abstractions\IMessageSerializer.cs" />
     <Compile Include="Messages\Serialization\MessageSerializer.cs" />
     <Compile Include="Messages\Serialization\SerializationState.cs" />
+    <Compile Include="Messages\Serialization\Serializers\FlagsSerializer.cs" />
     <Compile Include="Messages\Serialization\Serializers\IdSerializer.cs" />
     <Compile Include="Messages\Serialization\Serializers\PropertySerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
