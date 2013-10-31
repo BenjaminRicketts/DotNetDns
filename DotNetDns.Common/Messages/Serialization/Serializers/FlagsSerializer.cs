@@ -15,6 +15,7 @@ namespace DotNetDns.Common.Messages.Serialization.Serializers
 
             state.Message.IsAQuery = IsSelectedBitFalse(flags, 0x8000);
             state.Message.OperationCode = (OperationCode)((flags & 0x7800) >> 11);
+            state.Message.IsAuthoritative = IsSelectedBitTrue(flags, 0x0400);
 
             return state;
         }

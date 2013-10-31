@@ -70,5 +70,17 @@ namespace DotNetDns.Common.Tests.Messages.Serialization
 
             Assert.That(message.OperationCode, Is.EqualTo(expectedValue));
         }
+
+        [Test]
+        [TestCase(new byte[] { 0, 0 }, false)]
+        [TestCase(new byte[] { 4, 0 }, true)]
+        public void Authoritative_Flag_Is_Correctly_Deserialized(byte[] flagBytes, bool expectedValue)
+        {
+            var bytes = _headerBytes.WithFlagBytes(flagBytes).ToArray();
+
+            var message = _serializer.DeserializeFromBytes(bytes);
+
+            Assert.That(message.IsAuthoritative, Is.EqualTo(expectedValue));
+        }
     }
 }

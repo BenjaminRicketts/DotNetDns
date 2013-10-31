@@ -6,6 +6,8 @@
 
         public bool IsAQuery { get; set; }
 
+        public bool IsAuthoritative { get; set; }
+
         public OperationCode OperationCode { get; set; }
     }
 }
