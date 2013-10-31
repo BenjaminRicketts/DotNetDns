@@ -5,5 +5,7 @@
         public ushort Id { get; set; }
 
         public bool IsAQuery { get; set; }
+
+        public OperationCode OperationCode { get; set; }
     }
 }

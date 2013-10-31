@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\OperationCode.cs" />
     <Compile Include="Messages\Serialization\EndianessChecker.cs" />
     <Compile Include="Messages\Serialization\Abstractions\IEndianessChecker.cs" />
     <Compile Include="Messages\Serialization\Abstractions\IMessageSerializer.cs" />

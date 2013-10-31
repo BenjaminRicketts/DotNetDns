@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IntegerExtensionsTests.cs" />
+    <Compile Include="Messages\OperationCodeTests.cs" />
     <Compile Include="Messages\Serialization\EndianessCheckerTests.cs" />
     <Compile Include="Messages\Serialization\Helpers\HeaderBytes.cs" />
     <Compile Include="Messages\Serialization\MessageSerializerTests.cs" />

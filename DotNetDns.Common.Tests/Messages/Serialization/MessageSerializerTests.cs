@@ -1,4 +1,5 @@
 ﻿using System;
+using DotNetDns.Common.Messages;
 using DotNetDns.Common.Messages.Serialization;
 using DotNetDns.TestHelpers;
 using NUnit.Framework;
@@ -55,6 +56,19 @@ namespace DotNetDns.Common.Tests.Messages.Serialization
             var message = _serializer.DeserializeFromBytes(bytes);
 
             Assert.That(message.IsAQuery, Is.EqualTo(expectedValue));
+        }
+
+        [Test]
+        [TestCase(new byte[] { 0, 0 }, OperationCode.StandardQuery)]
+        [TestCase(new byte[] { 8, 0 }, OperationCode.InverseQuery)]
+        [TestCase(new byte[] { 16, 0 }, OperationCode.Status)]
+        public void Operation_Code_Is_Correctly_Deserialized(byte[] flagBytes, OperationCode expectedValue)
+        {
+            var bytes = _headerBytes.WithFlagBytes(flagBytes).ToArray();
+
+            var message = _serializer.DeserializeFromBytes(bytes);
+
+            Assert.That(message.OperationCode, Is.EqualTo(expectedValue));
         }
     }
 }
